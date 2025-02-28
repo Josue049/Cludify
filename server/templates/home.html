@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Homestyles.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='boldinclu.png') }}" alt="Logo de Includify">
+        <div>
+            <button onclick="window.location.href='{{ url_for('login') }}'">Iniciar sesión</button>
+        </div>
+    </nav>
+    <div class="image-container">
+        <div class="overlay">
+            <h1>¿Listo para conseguir empleo?</h1>
+            <p>Plataforma diseñada para personas con discapacidades<br>Busca, diviértete y comparte</p>
+            <button class="empezar" onclick="window.location.href='{{ url_for('index') }}'">¡Comienza ahora!</button>
+            <button class="publicar">Soy una empresa</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='Homescript.js') }}"></script>
+</body>
+</html>

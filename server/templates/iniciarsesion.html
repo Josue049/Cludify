@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includify - Iniciar Sesión</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Sesionstyles.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='boldinclu.png') }}" alt="Logo Includify">
+        <div>
+            <button id="btn-registro" onclick="window.location.href='{{ url_for('registro') }}'">Registrarse</button>
+        </div>
+    </nav>
+
+    <div class="image-container">
+        <div class="overlay">
+            <h1>Iniciar Sesión</h1>
+            <p>Accede a tu cuenta para encontrar oportunidades laborales.</p>
+            
+            <form id="login-form" method="POST" action="{{ url_for('login') }}">
+                <input type="email" name="correo" placeholder="Correo electrónico" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <button type="submit" class="empezar">Iniciar Sesión</button>
+            </form>
+
+            <p class="registrate">¿No tienes una cuenta? <a href="{{ url_for('registro') }}">Regístrate aquí</a></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='Sesionscript.js') }}"></script>
+</body>
+</html>

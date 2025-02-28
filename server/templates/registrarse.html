@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includify - Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Sesionstyles.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='boldinclu.png') }}" alt="Logo Includify">
+        <div>
+            <button id="btn-login" onclick="window.location.href='{{ url_for('login') }}'">Iniciar Sesión</button>
+        </div>
+    </nav>
+
+    <div class="image-container">
+        <div class="overlay">
+            <h1>Regístrate en Includify</h1>
+            <p>Plataforma diseñada para personas con discapacidad</br>Busca, diviértete y comparte</p>
+            
+            <form id="registro-form" method="POST" action="{{ url_for('registro') }}">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo electrónico" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <input type="password" name="repetir_contraseña" placeholder="Repetir contraseña" required>
+                <button type="submit" class="empezar">Registrarse</button>
+            </form>
+
+            <p>¿Ya tienes una cuenta? <a href="{{ url_for('login') }}">Inicia sesión aquí</a></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

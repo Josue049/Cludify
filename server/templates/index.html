@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <div class="reproductor">
+        <div class="cabeza">
+            <a>
+                <div class="info">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2258/2258853.png">
+                </div>
+            </a>
+        </div>
+        <div class="videos">
+            {% for video in video_urls %}
+                <div class="player">
+                    <video autoplay loop src="{{ video }}" class="video_player"></video>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="persona">
+            <ul>
+                {% for link_group in links_list %}
+                    {% for link in link_group %}
+                        <li>
+                            <img src="{{ link }}" alt="Imagen" class="imagen-persona">
+                        </li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="expo">
+        {% for anuncio in anuncios %}
+            <div class="cuadro">
+                <h2>{{ anuncio.title }}</h2>
+                <pre>{{ anuncio.description }}</pre>            
+                <div class="final">
+                    <div class="botonPostular">POSTULAR</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+
+    <footer class="movil">
+        <div class="menu">
+            <ul>
+                <li><a href=""><img src="https://cdn-icons-png.flaticon.com/512/18940/18940165.png"></a></li>
+                <li><a href=""></a><img src="https://cdn-icons-png.flaticon.com/512/2910/2910810.png"></a></li>
+                <li><a href=""></a><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"></a></li>
+            </ul>
+        </div>  
+    </footer>
+
+    <footer class="portatil">
+        <img class="logo" src="{{ url_for('static', filename='boldinclu.png') }}">
+        <div class="botones">
+            <a href=""><div class="selection"><img src="https://cdn-icons-png.flaticon.com/512/18940/18940165.png"><p>Videos</p></div></a>
+            <a href=""><div class="selection"><img src="https://cdn-icons-png.flaticon.com/512/2910/2910810.png"><p>Propuestas</p></div></a>
+            <a href=""><div class="selection"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png"><p>Perfil</p></div></a>
+        </div>
+        <div class="final">
+            <div class="boton">Opciones</div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+

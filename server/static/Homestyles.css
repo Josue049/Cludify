@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    height: 90vh;
+    background: url('https://cdn.pixabay.com/photo/2012/12/24/08/39/disabled-72211_1280.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    position: relative;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.566);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    img{
+        height: 80%;
+        margin-left: 30px;
+    }
+    button{
+        margin-right: 30px;
+        padding: 10px 20px;
+        margin: 5px;
+        border: 2px solid rgb(255, 146, 37);
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+    
+    button:hover {
+        border: 2px solid rgb(255, 255, 255);
+        background-color: rgb(255, 146, 37);
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+.overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.empezar {
+    background-color: #ed8516;
+    color: white;
+    font-size: 20px;
+    padding: 20px 40px;
+}
+
+.empezar:hover {
+    transform: scale(1.1);
+}
+
+.publicar {
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: black;
+    font-size: 16px;
+    padding: 12px 24px;
+}
+
+.publicar:hover {
+    background-color: #40a6ff;
+    color: rgb(255, 255, 255);
+}
+
+.overlay h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.overlay p {
+    font-size: 2rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 50px;
+}

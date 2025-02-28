@@ -1,0 +1,361 @@
+@media (max-width: 900px) {
+    .portatil{
+        display: none;
+    }
+
+    .expo{
+        display: none;
+    }
+
+    .cabeza{
+        display: none;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .reproductor{
+        background-color: rgb(255, 255, 255);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    video{
+        background-color: rgb(255, 255, 255);
+        height: 100vh;
+        width: auto;
+        border-radius: 25px;
+        max-width: 90vw;
+    }
+
+    footer{
+        /* background-color: red; */
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu{
+        background-color: rgb(218, 218, 218);
+        height: 70%;
+        width: 80%;
+        border-radius: 50px;
+        border: 2px solid rgba(52, 52, 52, 0.373);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style: none;
+        width: 100%;
+        height: 70%;
+    }
+    img{
+        height: 100%;
+        width: auto;
+    }
+}
+
+@media (min-width: 900px){
+    .movil{
+        display: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .reproductor {
+        order: 2; /* Cambia el orden del reproductor */
+        /* background-color: rgb(242, 242, 242); */
+        height: 95vh;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .cabeza{
+        height: 5vh;
+        width: 99%;
+        /* background-color: salmon; */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 1%;
+
+        a img{
+            height: 3vh;
+            width: auto;
+            align-items: center;
+            margin: 1vh;
+        }
+
+        .info{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 4vh;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .info:hover{
+            background-color: rgb(204, 204, 204);
+            cursor: pointer;
+        }
+    }
+
+    html {
+        scroll-snap-type: y mandatory;
+    }
+
+    .videos{
+        display: flex;
+        height: 95vh;
+        align-items: center;
+        justify-content: flex;
+        position: relative;
+        flex-direction: column;  /* Organiza los videos verticalmente */
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth; /* Hace que el scroll sea suave */
+        overflow-y: scroll;  /* Permite el desplazamiento vertical */
+        scroll-snap-type: y mandatory;
+        
+    }
+
+    .videos::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .player {
+        scroll-snap-align: start; /* Hace que cada video se alinee al principio del contenedor */
+        width: 100%;
+        height: 95vh;
+        /* background-color: black;  Fondo negro mientras el video carga */
+    }
+
+    .video_player {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;  /* Ajusta el video para cubrir el contenedor sin distorsión */
+    }
+
+    video{
+        height: 90vh;
+        width: auto;
+        border-radius: 25px;
+        max-width: 95%;
+        cursor: pointer; /* Mejora la UX */
+    }
+
+    footer{
+        width: 20%;
+        /* max-width: 250px; */
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.227);
+        background-color: rgba(241, 241, 241, 0.456);
+        justify-content: space-around;
+        height: 100vh;
+    }
+
+    .logo{
+        width: 70%;
+        margin-left: 10%;
+        /* margin-top: 50px; */
+        /* margin-bottom: 100px; */
+        /* background-color: blue; */
+
+    }
+
+    .selection{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        height: 6vh;
+        /* background-color: rgb(195, 255, 0); */
+        width: 85%;
+        margin-left: 5%;
+        padding-left: 5%;
+
+        img{
+            height: 60%;
+            width: auto;
+            margin-right: 20px;
+        }
+    }
+
+    .selection:hover {
+        background-color: rgb(227, 227, 227); /* Color visible */
+        cursor: pointer; /* Mejora la UX */
+    }    
+
+    p {
+        font-size: small;
+        margin-right: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    footer a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .final{
+        /* background-color: salmon; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .boton{
+        background-color: #feb656;
+        border-radius: 20px;
+        width: 80%;
+        height: 7vh;
+        max-height: 50px;
+        align-content: center;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: small;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;        
+        cursor: pointer; /* Mejora la UX */
+    }
+
+    .expo {
+        background-color: rgba(237, 237, 237, 0.679);
+        order: 3;
+        width: 40%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .cuadro {
+        height: auto;
+        max-height: 70%;
+        width: 90%;
+        border: 1px solid rgba(0, 0, 0, 0.33);
+        border-radius: 20px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between; /* Espaciado uniforme */
+        padding: 15px;
+        overflow: hidden; /* Evita que los elementos desborden */
+    }
+    
+    .cuadro h2 {
+        text-align: center;
+        font-weight: bold;
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    
+    .cuadro pre {
+        font-family: Arial, Calibri, 'Trebuchet MS', sans-serif;
+        font-size: small;
+        width: 90%;
+        text-align: center;
+        /* font-weight: lighter; */
+        overflow-y: auto; /* Activa scroll si el texto es largo */
+        padding-right: 5px;white-space: pre-wrap; /* Permite saltos de línea cuando sea necesario */
+        overflow-x: hidden;     /* Evita el scroll horizontal */
+    }
+    
+    .final {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* margin-top: auto; Empuja el botón hacia abajo */
+    }
+    
+    .botonPostular {
+        background-color: #feb656;
+        border-radius: 20px;
+        width: 80%;
+        height: 7vh;
+        max-height: 50px;
+        align-content: center;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        font-size: small;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+
+    .persona{
+        background-color: rgb(248, 248, 248);
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        bottom: 0px;
+        right: 5vh;
+        border: 2px solid rgba(0, 0, 0, 0.253);
+        border-radius: 10px;
+        overflow: hidden; /* Evita que la imagen sobresalga */
+
+        img{
+            width: 200px;
+            height: auto;
+            display: block; /* Elimina espacios blancos indeseados */
+        }
+    }
+}
+
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.persona{
+    background-color: rgb(248, 248, 248);
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    bottom: 0px;
+    right: 5vh;
+    border: 2px solid rgba(0, 0, 0, 0.253);
+    border-radius: 10px;
+    overflow: hidden; /* Evita que la imagen sobresalga */
+    margin-bottom: 30px;
+
+    img{
+        width: 200px;
+        height: auto;
+        display: block; /* Elimina espacios blancos indeseados */
+    }
+}
